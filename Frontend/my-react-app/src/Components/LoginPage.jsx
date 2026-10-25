@@ -30,7 +30,7 @@ const LoginPage = ({ onLoginSuccess }) => {
 
   return (
     <div className='loginpage'>
-        <h1>Login User</h1>
+        <h1 className='text-3xl font-bold mb-4 bg-slate-800 p-4 rounded-lg'>Login User</h1>
         <form onSubmit={handleSubmit}>
             <input
               type="email"
@@ -48,7 +48,7 @@ const LoginPage = ({ onLoginSuccess }) => {
               onChange={(event) => setPassword(event.target.value)}
               required
             />
-            <button type='submit' disabled={isSubmitting}>
+            <button type='submit' disabled={isSubmitting} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
               {isSubmitting ? 'Logging in...' : 'Login'}
             </button>
             {error && <p role="alert">{error}</p>}
